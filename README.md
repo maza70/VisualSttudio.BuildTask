@@ -1,4 +1,4 @@
-# VisualSttudio.BuildTask
+# VisualStudio.BuildTask
 Sampel to create own Build-Tasks for Visual Studio as a nuget package.
 
 1. Open VisualSttudio.BuildTask\MazaBuildTask\MazaBuildTask.sln
