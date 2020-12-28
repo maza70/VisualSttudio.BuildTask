@@ -1,0 +1,28 @@
+<!-- 
+  This file is automatically imported by NuGet into a user's project
+  when it targets a single framework, or in classic (pre 2017) csproj projects.
+ 
+  for netcore Apps use the netcoreapp3.1/MpdvBuildTasks.dll
+  for net framework  Apps use the net472/MpdvBuildTasks.dll
+ 
+-->
+<Project  TreatAsLocalProperty="TaskFolder;TaskAssembly">
+  
+  <PropertyGroup>
+    <TaskFolder Condition=" '$(MSBuildRuntimeType)' == 'Core' ">netcoreapp3.1</TaskFolder>
+    <TaskFolder Condition=" '$(MSBuildRuntimeType)' != 'Core' ">net472</TaskFolder>
+    <TaskAssembly>$(MSBuildThisFileDirectory)..\tasks\$(TaskFolder)\MazaBuildTasks.dll</TaskAssembly>
+  </PropertyGroup>
+
+  
+  <!-- declare the new task taskname is the Full name off the Task class in the assembly
+   Sample for using in this new Task 
+   <Target Name="CreateRuntime" AfterTargets="Build">
+    <MazaTask Outputpath="$(ProjectDir)$(OutDir)"/>
+   </Target>
+  -->
+  
+  <UsingTask TaskName="Maza.BuildTasks.MazaTask" AssemblyFile="$(TaskAssembly)" />
+  <UsingTask TaskName="Maza.BuildTasks.HelloWorldTask" AssemblyFile="$(TaskAssembly)" />
+ 
+</Project>

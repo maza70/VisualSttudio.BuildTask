@@ -1,0 +1,34 @@
+<!-- 
+  new targets include in the project when the package loaded
+  Please Restart the Visual Studio after update the package!
+  
+  See Vs targets: https://docs.microsoft.com/de-de/visualstudio/msbuild/build-process-overview?view=vs-2019
+  
+  BuildOnlySettings;
+  PrepareForBuild;
+  PreBuildEvent;
+  ResolveReferences;
+  PrepareResources;
+  ResolveKeySource;
+  Compile;
+  ExportWindowsMDFile;
+  UnmanagedUnregistration;
+  GenerateSerializationAssemblies;
+  CreateSatelliteAssemblies;
+  GenerateManifests;
+  GetTargetPath;
+  PrepareForRun;
+  UnmanagedRegistration;
+  IncrementalClean;
+  PostBuildEvent
+-->
+<Project >
+
+  <!--this targets will joined to the project that used the package -->
+<!--
+  <Target Name="CreateRuntime" AfterTargets="Build">
+    <MazaTask Outputpath="MyVaraiable"/>
+  </Target>
+  -->
+  
+</Project>

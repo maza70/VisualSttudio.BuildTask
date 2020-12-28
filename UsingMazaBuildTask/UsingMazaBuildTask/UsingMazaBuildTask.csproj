@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+  </PropertyGroup>
+
+
+  <Target Name="CreateRuntime" AfterTargets="Build">
+    <MazaTask Outputpath="$(OutDir)" />
+  </Target>
+
+  <Target Name="hello World" AfterTargets="PrepareForBuild">
+    <HelloWorldTask />
+  </Target>
+  
+  <ItemGroup>
+    <PackageReference Include="MazaBuildTasks" Version="0.1.0-build*" />
+  </ItemGroup>
+</Project>
